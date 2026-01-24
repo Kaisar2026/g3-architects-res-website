@@ -52,10 +52,6 @@ main > section {
   font-weight: 700;
 }
 
-
-/* header styles */
-
-
 /* navbar related styles */
 .navbar{
   justify-content: space-between;
@@ -104,6 +100,9 @@ main > section {
   width: 100%;
 }
 
+/*features description start */
+
+
 /* team and f eatures related styles */
 .teams{
   align-items: center;
@@ -121,68 +120,90 @@ main > section {
 #quick-list{
   font-weight: 500;
 }
+
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .sponsor-companies img{
+    filter: grayscale(100%); /* Converts image to 100% grayscale */
+  }
+
 /* Responsive Media Query */
 @media screen and (max-width: 576px) {
-  .navbar, 
-  .nav-links,
-  .teams{
-    flex-direction: column;
-  }
-  .team-img-container{
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .our-features{
-    margin-left: 20px;
-  }
+    .navbar, 
+    .nav-links,
+    .teams{
+      flex-direction: column;
+    } 
+    .team-img-container, 
+    .facts-container, 
+    .sponsor-companies{
+      grid-template-columns: repeat(1fr);
+    }
+
+    .fact-card, .sponsor-companies{
+      justify-content: center;
+    }
+
+    .our-features{
+      margin-left: 20px;
+    }
 }
 
 /*Some fact related style */
-.fact-description{
-  width: 542px;
-  height: 52px;
-  font-size: 1rem;
-  color: #727272;
-  margin-top: 24px;
-}
+  .fact-description{
+    width: 542px;
+    height: 52px;
+    font-size: 1rem;
+    color: #727272;
+    margin-top: 24px;
+  }
 
-.fact-card{
-  border: 1px solid #FF900E;
-  width: 240px;
-  height: 240px;
-  border-radius: 8px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-}
-.facts-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  .fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   
-}
+  }
 
-.fact-number{
-  font-size: 2.8rem;
-  font-weight: 600;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
+  .fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
 
-.fact-name{
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #727272;
-  margin-top: 10px;
-}
+  .fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #727272;
+    margin-top: 10px;
+  }
 
+/* sponsor related styles */
+  .sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
 
 /* medium device size */
 @media screen and (min-width:576px) and (max-width:992px) {
-  .teams{
-    flex-direction: column;
-  }
-  .our-features{
-    margin: 50px auto;
-  }
-  
+    .teams{
+      flex-direction: column;
+    }
+    .our-features{
+      margin: 50px auto;
+    }
 }
